@@ -43,3 +43,20 @@ console.log(listaStudenti);
 for (var key in listaStudenti) {
   console.log(listaStudenti[key].nome, listaStudenti[key].cognome);
 }
+
+// 3. Utente inserisce nuovo oggetto-studente nell'array con 3 prompt
+var firstNameStudent = prompt('Inserisci il tuo nome').trim();
+var lastNameStudent = prompt('Inserisci il tuo cognome').trim();
+var age = parseInt(prompt('Inserisci la tua età ').trim() );
+
+var newStudent = {
+  nome: firstNameStudent,
+  cognome: lastNameStudent,
+  età: age,
+};
+
+console.log('Aggiungi alla lista un nuovo studente ', listaStudenti.push(newStudent) );
+
+for (var key in listaStudenti) {
+  console.log(listaStudenti[key].nome, listaStudenti[key].cognome, listaStudenti[key].età);
+}
